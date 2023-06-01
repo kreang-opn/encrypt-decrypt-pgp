@@ -27,9 +27,9 @@ func main() {
 		log.Fatal("error encrypt", err)
 	}
 
-	err = ioutil.WriteFile(os.Args[2]+".pgp", []byte(armor), os.ModePerm)
+	err = ioutil.WriteFile(os.Args[1]+".pgp", []byte(armor), os.ModePerm)
 	if err != nil {
 		log.Fatal("error write file", err)
 	}
-	log.Println("Done", os.Args[2]+".pgp")
+	log.Println("Done", os.Args[1]+".pgp")
 }
